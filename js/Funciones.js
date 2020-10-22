@@ -4,11 +4,9 @@ $("#btnValidar").click(function (event) {
   let re = /([A-Z]{1})([\d]{3})([a-z]{3})([\W]{3})/;
   var match = re.test($("#pass").val());
   if (!match) {
-    alert("Contrasena Invalida");
-    return;
+    Swal.fire("Contrasena invalida");
   } else {
-    alert("Contrasena valida");
-    return;
+    Swal.fire("Contrasena valida");
   }
 });
 
